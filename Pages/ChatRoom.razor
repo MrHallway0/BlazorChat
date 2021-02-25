@@ -8,7 +8,7 @@
 @if (!_isChatting)
 {
     <p>
-        Enter your name to start chatting:
+        Nickname:
     </p>
 
     <input type="text" maxlength="32" @bind="@_username" />
@@ -46,7 +46,7 @@ else
             }
         }
         <hr />
-        <textarea class="input-lg" placeholder="enter your comment" @bind="@_newMessage"></textarea>
+        <textarea class="input-lg" placeholder="" @bind="@_newMessage"></textarea>
         <button class="btn btn-default" @onclick="@(() => SendAsync(_newMessage))">Send</button>
     </div>
 }
